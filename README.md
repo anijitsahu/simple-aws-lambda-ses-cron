@@ -31,15 +31,30 @@ To use the code in this example you must have an valid [AWS account](https://aws
 
 
 6. **Two** types of events are supported `httpAPi` and `schedule`.
-7. All Emails are sent using [AWS Simple Email Service(SES)](https://aws.amazon.com/ses/). For that purpose valid *Identities* must be created
+7. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
+
+<ol start="8">
+  <li> All Emails are sent using <a href="https://aws.amazon.com/ses/">AWS Simple Email Service(SES)</a>. For that purpose valid *Identities* must be created</li>
+  <li>  Email Templates are created using HTML5 and CSS3</li> 
+  <li> This APIs can also be consumed by any Frontend Application.</li> 
+</ol>  
+
+11. [NPM](https://www.npmjs.com/) dependencies are used for various purposes
 
 ## Usage
 
 First clone the repo
 
 ```bash
- git clone git@github.com:anijitsahu/simple-aws-lambda-ses.git
+$ git clone git@github.com:anijitsahu/simple-aws-lambda-ses.git
 ```
+Install all the necessary dependencies by going inside the directory
+
+```bash
+$ cd simple-aws-lambda-ses.git
+$ npm install
+```
+
 
 ### Deployment
 
@@ -54,7 +69,7 @@ $ serverless deploy
 After successful deployment, you can invoke the deployed function. 
 All the `cron` events will invoke the deployed functions in stipulated time interval. 
 
-However, to call using `httpApi` you can use any REST Client with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
+However, to call using `httpApi` you can use any REST Client like [Talend API Tester](https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?hl=en) with the `url` and *HTTP Verbs* as shown in Terminal after using `serverless deploy`.
 
 
 
