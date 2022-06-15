@@ -1,6 +1,4 @@
 
-
-
 # simple-aws-lambda-ses
 
 This example demonstrates how to deploy a [NodeJS](https://nodejs.org/en/docs/) function running on [AWS Lambda](https://aws.amazon.com/lambda/) using the traditional [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/intro) Framework. The deployed function works with multiple type of event definitions.
@@ -25,7 +23,7 @@ To use the code in this example you must have an valid [AWS account](https://aws
     <code>serverless.json</code> is used for deployment configuration instead <code>serverless.yml</code>
   </li>  
   <li>
-    All the deployment is created in <a href="https://aws.amazon.com/s3/">AWS S3</a> and <a href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a> Stack.
+    All the deployment is created in <a href="https://aws.amazon.com/s3/">AWS S3</a> to store the <code>.zip</code> of the function code and <a href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a> Stack.
   </li>  
 </ol>  
 
