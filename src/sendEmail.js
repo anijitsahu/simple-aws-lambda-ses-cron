@@ -5,8 +5,9 @@ import { SendEmailCommand } from "@aws-sdk/client-ses";
 import { emailClient } from "./libs/emailClient.js";
 import { listGenericIdentities } from "./helpers/listGenericEmailIdentities.js";
 import { sampleEmailTemplate } from "./helpers/templates.js";
+import { sendResponse } from "./helpers/sendResponse.js";
 
-export async function sendEmailHandler() {
+export async function sendEmailHandler(event) {
   try {
     // list set of Generic Email Accounts which will send the emails
     const genericAccounts = await listGenericIdentities();
@@ -38,18 +39,23 @@ export async function sendEmailHandler() {
       const emailData = await emailClient.send(
         new SendEmailCommand(emailParams)
       );
-      return {
-        statusCode: 200,
-        body: JSON.stringify({
+
+      // for HTTP API events send the response with some headers
+      if (event && event.routeKey) {
+        const res = {
           genericAccounts,
           sendEmailCode: emailData["$metadata"].httpStatusCode,
-        }),
-      };
+        };
+        return sendResponse(process.env.SUCCESS_CODE, res);
+      }
+      return;
     }
   } catch (error) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ msg: "Unable to send Emails", error }),
-    };
+    // for HTTP API events send the response with some headers
+    if (event && event.routeKey) {
+      const res = { msg: "Unable to send Emails", error };
+      return sendResponse(process.env.ERROR_CODE, res);
+    }
+    return;
   }
 }

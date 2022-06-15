@@ -11,9 +11,7 @@
         "statements": [
           {
             "Effect": "Allow",
-            "Action": [
-              "ses:*"
-            ],
+            "Action": ["ses:*"],
             "Resource": "*"
           }
         ]
@@ -27,11 +25,7 @@
   "functions": {
     "sendEmail": {
       "handler": "src/sendEmail.sendEmailHandler",
-      "events": [
-        {
-          "httpApi": "POST /sendmail"
-        }
-      ]
+      "events": [{ "httpApi": "POST /sendmail" }]
     }
   }
 }
