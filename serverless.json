@@ -1,5 +1,5 @@
 {
-  "service": "serverless-basic-ses",
+  "service": "serverless-basic-ses-cron",
   "frameworkVersion": "3",
   "configValidationMode": "error",
   "plugins": ["serverless-dotenv-plugin"],
@@ -11,7 +11,7 @@
         "statements": [
           {
             "Effect": "Allow",
-            "Action": ["ses:*"],
+            "Action": ["ses:SendEmail", "ses:ListIdentities"],
             "Resource": "*"
           }
         ]
@@ -27,7 +27,7 @@
       "handler": "src/sendEmail.sendEmailHandler",
       "events": [
         { "httpApi": "POST /sendmail" },
-        { "schedule": "rate(2 minutes)" }
+        { "schedule": "rate(5 minutes)" }
       ]
     }
   }
