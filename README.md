@@ -34,7 +34,7 @@ To use the code in this example you must have an valid [AWS account](https://aws
 <ol start="8">
   <li> All Emails are sent using <a href="https://aws.amazon.com/ses/">AWS Simple Email Service(SES)</a>. For that purpose valid *Identities* must be created</li>
   <li>  Email Templates are created using <a href="https://www.w3schools.com/html/default.asp">HTML5</a> and <a href="https://www.w3schools.com/css/">CSS3</a></li> 
-  <li> This APIs can also be consumed by any Frontend Application.</li> 
+  <li> This APIs can also be consumed by any <b>Frontend Application</b>.</li> 
 </ol>  
 
 11. [NPM](https://www.npmjs.com/) dependencies are used for various purposes
