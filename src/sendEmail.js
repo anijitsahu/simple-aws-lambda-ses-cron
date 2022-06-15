@@ -4,7 +4,7 @@ import { SendEmailCommand } from "@aws-sdk/client-ses";
 // local dependencies
 import { emailClient } from "./libs/emailClient.js";
 import { listGenericIdentities } from "./helpers/listGenericEmailIdentities.js";
-import { sampleEmailTemplate } from "./helpers/templates.js";
+import { sampleEmailTemplate } from "./helpers/generateTemplates.js";
 import { sendResponse } from "./helpers/sendResponse.js";
 
 export async function sendEmailHandler(event) {
