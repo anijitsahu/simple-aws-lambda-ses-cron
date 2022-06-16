@@ -13,14 +13,14 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 
 ## Features
 1. [AWS Lambda](https://aws.amazon.com/lambda/) function using [NodeJS](https://nodejs.org/en/docs/)
-2. Function is using latest version of [AWS SDK JavaScript v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html) with all **ES6+**  syntaxes like Promises, `async/await`.
+2. Function is using latest version of [AWS SDK JavaScript v3](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html) with all **ES6+**  syntaxes like Promises, `async/await`
 
 <ol start="3">
   <li>
-     Function are deployed using <a href="https://www.serverless.com/framework/docs/providers/aws/guide/intro">Serverless</a> Framework
+     Function are deployed using <a href="https://www.serverless.com/framework/docs/providers/aws/guide/intro">Serverless</a> Framework.
   </li>  
   <li>
-    <code>serverless.json</code> is used for deployment configuration instead of <code>serverless.yml</code>
+    <code>serverless.json</code> is used for deployment configuration instead of <code>serverless.yml</code>.
   </li>  
   <li>
     All the deployment is created in <a href="https://aws.amazon.com/s3/">AWS S3</a> to store the <code>.zip</code> of the function code and <a href="https://aws.amazon.com/cloudformation/">AWS CloudFormation</a> Stack.
@@ -28,17 +28,17 @@ To use the code in this example you **must** have an valid [AWS account](https:/
 </ol>  
 
 
-6. **Two** types of events are supported `httpAPi` and `schedule`.
+6. **Two** types of events are supported `httpAPi` and `schedule`
 7. [AWS HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop.html) are using [AWS API GateWay](https://aws.amazon.com/api-gateway/)
 
 <ol start="8">
-  <li> All Emails are sent using <a href="https://aws.amazon.com/ses/">AWS Simple Email Service(SES)</a>. For that purpose valid <i>Identities</i> must be created</li>
+  <li> All Emails are sent using <a href="https://aws.amazon.com/ses/">AWS Simple Email Service(SES)</a>. For that purpose valid <i>Identities</i> must be created.</li>
   <li>  Email Templates are created using <a href="https://www.w3schools.com/html/default.asp">HTML5</a> and <a href="https://www.w3schools.com/css/">CSS3</a></li> 
   <li> This APIs can also be consumed by any <b>Frontend Application</b>.</li> 
 </ol>  
 
-11. [NPM](https://www.npmjs.com/) dependencies are used for various purposes
-12. **Custom Headers** are added with the response for *obvious security* reasons
+11. [NPM](https://www.npmjs.com/) dependencies are used for various purposes.
+12. **Custom Headers** are added with the response for *obvious security* reasons.
 
 ## Usage
 
