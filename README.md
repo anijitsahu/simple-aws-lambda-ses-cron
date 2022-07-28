@@ -50,7 +50,7 @@ $ git clone git@github.com:anijitsahu/simple-aws-lambda-ses-cron.git
 Install all the necessary dependencies by going inside the directory
 
 ```bash
-$ cd simple-aws-lambda-ses-cron.git
+$ cd simple-aws-lambda-ses-cron
 $ npm install
 ```
 
